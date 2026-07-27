@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michele &amp; Giorgia — 10 Luglio 2027</title>
+<meta name="description" content="Il nostro matrimonio, la nostra favola. Save the date: 10 Luglio 2027.">
+
+<!--
+  ============================================================
+  COME MODIFICARE QUESTO SITO — leggimi prima di iniziare
+  ============================================================
+  1. Cerca i commenti tipo "MODIFICA QUI" in questo file, in style.css
+     e in script.js: indicano i punti pensati per essere personalizzati.
+  2. Le immagini vanno messe nella cartella /images con i nomi indicati
+     nei commenti (es. images/hero-sposi.jpg). Finché non le carichi,
+     al loro posto comparirà un'illustrazione di riserva elegante.
+  3. Il video della proposta va messo in /videos/proposta.mp4
+     (oppure sostituisci il tag <video> con un embed di YouTube,
+     istruzioni nel commento apposito).
+  4. I nomi di Michele e Giorgia sono già scritti per esteso ovunque:
+     se in futuro cambia qualcosa, usa "trova e sostituisci" del tuo editor.
+  5. I colori e i font si modificano tutti dalle variabili in cima a
+     style.css (sezione :root), senza dover toccare il resto del CSS.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAVIGAZIONE ============ -->
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <a class="monogram" href="#top" aria-label="Torna all'inizio">M<span class="monogram__amp">&amp;</span>G</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Apri il menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Sezioni del sito">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#conosciuti">Come ci siamo conosciuti</a></li>
+        <li><a href="#storia">La proposta</a></li>
+        <li><a href="#chiesa">Il rito</a></li>
+        <li><a href="#location">Il ricevimento</a></li>
+        <li><a href="#viaggio">Il viaggio</a></li>
+        <li><a href="#regalo">Un regalo</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ 1. HOME / HERO — SAVE THE DATE ============ -->
+  <section class="hero" id="home">
+    <!--
+      MODIFICA QUI: sostituisci lo sfondo con la vostra foto.
+      In style.css cerca ".hero" e cambia l'url() di background-image
+      in "images/hero-sposi.jpg". Finché non carichi la foto resta
+      visibile l'illustrazione floreale di riserva qui sotto.
+    -->
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__petals" aria-hidden="true" id="heroPetals"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light">Ci sposiamo</p>
+      <h1 class="hero__title">Michele <span class="amp">&amp;</span> Giorgia</h1>
+      <p class="hero__script">una favola che continua</p>
+
+      <div class="save-the-date">
+        <p class="save-the-date__label">Save the date</p>
+        <time class="save-the-date__date" datetime="2027-07-10">10 Luglio 2027</time>
+      </div>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="countdown__item"><span class="countdown__num" id="cd-days">–</span><span class="countdown__label">giorni</span></div>
+        <div class="countdown__item"><span class="countdown__num" id="cd-hours">–</span><span class="countdown__label">ore</span></div>
+        <div class="countdown__item"><span class="countdown__num" id="cd-mins">–</span><span class="countdown__label">minuti</span></div>
+        <div class="countdown__item"><span class="countdown__num" id="cd-secs">–</span><span class="countdown__label">secondi</span></div>
+      </div>
+
+      <a href="#conosciuti" class="scroll-cue" aria-label="Scorri per scoprire la nostra storia">
+        <span class="scroll-cue__line" aria-hidden="true"></span>
+        continua a leggere
+      </a>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><!-- MODIFICA QUI: divisorio decorativo ripetuto tra le sezioni, definito in style.css --></div>
+
+  <!-- ============ 2. COME CI SIAMO CONOSCIUTI ============ -->
+  <section class="section section--meet" id="conosciuti">
+    <div class="section__inner">
+      <p class="eyebrow">Il nostro inizio</p>
+      <h2 class="section__title">Come ci siamo conosciuti</h2>
+
+      <div class="story-layout">
+        <article class="story-text reveal">
+          <p>
+            <!-- MODIFICA QUI: racconta qui i dettagli veri del vostro incontro nel basket, con nomi di squadra, anno, aneddoti che preferisci. -->
+            Ci siamo conosciuti su un campo da basket, molto prima di immaginare
+            che quella squadra ci avrebbe portati fin qui. Michele era il secondo
+            allenatore della squadra in cui giocava Giorgia, e Giorgia allo stesso
+            tempo lo affiancava come sua assistente nei settori giovanili.
+          </p>
+          <p>
+            Tra allenamenti, partite e chiacchiere sulla panchina è nata,
+            senza fretta, la nostra complicità: prima una squadra, poi un'amicizia,
+            poi molto di più. Da quel campo siamo passati a costruire, insieme,
+            la squadra più importante di tutte: la nostra.
+          </p>
+        </article>
+
+        <figure class="story-media reveal">
+          <!-- MODIFICA QUI: sostituisci con una foto vostra del basket in images/basket.jpg -->
+          <img class="meet-photo" src="images/basket.jpg" alt="Michele e Giorgia sul campo da basket" loading="lazy"
+               onerror="this.closest('figure').classList.add('img-fallback--basket')">
+          <figcaption>Dove tutto è cominciato: il campo da basket</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 3. LA PROPOSTA ============ -->
+  <section class="section section--story" id="storia">
+    <div class="section__inner">
+      <p class="eyebrow">4 luglio</p>
+      <h2 class="section__title">La proposta</h2>
+
+      <div class="story-layout">
+        <article class="story-text">
+          <p>
+            Ogni favola ha un inizio silenzioso, fatto di sguardi e coincidenze che
+            solo dopo capiamo essere destino. La nostra è cresciuta passo dopo passo,
+            tra piccoli gesti quotidiani e grandi sogni condivisi, fino ad arrivare
+            a una sera di luglio che non dimenticheremo mai.
+          </p>
+          <p>
+            <!-- MODIFICA QUI: racconta qui i dettagli della vostra storia, con i tempi e i luoghi che preferite. -->
+            Il 4 luglio, sotto il cielo di Tor Vergata, durante il concerto di Ultimo,
+            le note di <cite>Quando dorme la città</cite> hanno fatto da colonna sonora
+            al momento più importante della nostra vita: in mezzo a migliaia di persone,
+            è arrivata una domanda sussurrata solo per noi due.
+          </p>
+
+          <blockquote class="story-quote">
+            <p>«Ti va di amarmi adesso e oltre gli anni?»</p>
+          </blockquote>
+
+          <p>
+            Ho detto sì, tra le lacrime e la musica, ed è iniziato il conto alla
+            rovescia più bello: quello verso il giorno in cui diventeremo marito e moglie.
+          </p>
+        </article>
+
+        <figure class="story-media">
+          <!--
+            MODIFICA QUI: il video della proposta.
+            Opzione A (file tuo): metti il file in /videos/proposta.mp4 e lascia il tag <video>.
+            Opzione B (YouTube): cancella il tag <video> e incolla al suo posto un iframe
+            di YouTube, ad esempio:
+            <iframe src="https://www.youtube.com/embed/TUO_ID_VIDEO" title="La proposta"
+              allowfullscreen loading="lazy"></iframe>
+          -->
+          <video class="story-video" id="proposalVideo" controls playsinline preload="none" poster="images/proposta-poster.jpg">
+            <source src="videos/proposta.mp4" type="video/mp4">
+            Il tuo browser non supporta la riproduzione video. Puoi comunque
+            <a href="videos/proposta.mp4">scaricare il video della proposta qui</a>.
+          </video>
+          <figcaption>4 luglio · Concerto di Ultimo, Tor Vergata · <em>Quando dorme la città</em></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 4. IL RITO — CHIESA ============ -->
+  <section class="section section--venue" id="chiesa">
+    <div class="section__inner">
+      <p class="eyebrow">Ore 16:00</p>
+      <h2 class="section__title">Il rito</h2>
+
+      <div class="venue-layout">
+        <figure class="venue-media">
+          <!-- MODIFICA QUI: sostituisci con una foto del santuario in images/santuario.jpg -->
+          <img src="images/santuario.jpg" alt="Santuario della Madonna di Belvedere, Città di Castello" loading="lazy"
+               onerror="this.closest('figure').classList.add('img-fallback--church')">
+          <figcaption>Santuario della Madonna di Belvedere</figcaption>
+        </figure>
+
+        <article class="venue-text">
+          <h3>Santuario della Madonna di Belvedere</h3>
+          <p>Città di Castello (PG)</p>
+          <p>
+            Ci scambieremo le promesse nella quiete di questo santuario, un luogo
+            raccolto e luminoso, tra candele accese e profumo di fiori, mentre
+            la luce del pomeriggio d'estate entra dalle vetrate.
+          </p>
+          <p class="venue-time"><time datetime="2027-07-10T16:00">La cerimonia inizia alle ore 16:00</time></p>
+
+          <a class="btn btn--outline" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Santuario+della+Madonna+di+Belvedere+Citt%C3%A0+di+Castello">
+            Apri in Google Maps
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOTA DI VICINANZA TRA CHIESA E VILLA ============ -->
+  <div class="proximity-note">
+    <div class="proximity-note__inner">
+      <span class="proximity-note__icon" aria-hidden="true">✦</span>
+      <p>
+        Dal Santuario a Villa Pasqui ci sono solo <strong>circa 500 metri</strong>:
+        pochi minuti in auto, per continuare la festa senza fretta.
+      </p>
+      <a class="proximity-note__link" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/dir/?api=1&origin=Santuario+della+Madonna+di+Belvedere+Citt%C3%A0+di+Castello&destination=Villa+Pasqui+Citt%C3%A0+di+Castello&travelmode=driving">
+        Vedi il percorso in auto →
+      </a>
+    </div>
+  </div>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 5. IL RICEVIMENTO — VILLA PASQUI ============ -->
+  <section class="section section--venue section--reception" id="location">
+    <div class="section__inner">
+      <p class="eyebrow">Dalle ore 18:00</p>
+      <h2 class="section__title">Il ricevimento</h2>
+
+      <div class="venue-layout venue-layout--reverse">
+        <figure class="venue-media">
+          <!-- MODIFICA QUI: sostituisci con una foto di Villa Pasqui in images/villa-pasqui.jpg -->
+          <img src="images/villa-pasqui.jpg" alt="Villa Pasqui, Città di Castello" loading="lazy"
+               onerror="this.closest('figure').classList.add('img-fallback--villa')">
+          <figcaption>Villa Pasqui</figcaption>
+        </figure>
+
+        <article class="venue-text">
+          <h3>Villa Pasqui</h3>
+          <p>Città di Castello (PG)</p>
+          <p>
+            Tra ortensie lilla, candelabri accesi e tavoli imbanditi sotto il
+            cielo umbro, la festa continuerà a Villa Pasqui: musica, brindisi
+            e una serata che vogliamo condividere con voi fino a notte fonda.
+          </p>
+          <p class="venue-time"><time datetime="2027-07-10T18:00">Accoglienza degli invitati dalle ore 18:00</time></p>
+
+          <a class="btn btn--outline" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Villa+Pasqui+Citt%C3%A0+di+Castello">
+            Apri in Google Maps
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 6. VIAGGIO DI NOZZE ============ -->
+  <section class="section section--trip" id="viaggio">
+    <div class="section__inner">
+      <p class="eyebrow">Dopo il fatidico sì</p>
+      <h2 class="section__title">Il nostro viaggio di nozze</h2>
+      <p class="section__intro">
+        Da un palco di Roma a un tramonto sull'oceano: la nostra favola prosegue
+        attraversando la West Coast americana, fino alle spiagge delle Hawaii.
+      </p>
+
+      <!--
+        MODIFICA QUI: galleria a slide unica. Per aggiungere/togliere una
+        tappa, copia o rimuovi un intero blocco <figure class="slideshow__slide">
+        E il pallino corrispondente più sotto (stesso data-index).
+      -->
+      <div class="slideshow" id="tripSlideshow" role="region" aria-roledescription="carosello" aria-label="Galleria del viaggio di nozze">
+        <div class="slideshow__track">
+          <figure class="slideshow__slide is-active" data-index="0">
+            <img src="images/trip-la.jpg" alt="Los Angeles, California" loading="lazy"
+                 onerror="this.closest('figure').classList.add('img-fallback--la')">
+            <figcaption>
+              <h3>Los Angeles, California</h3>
+              <p>Le luci della città degli angeli, Hollywood e gli Studios per rivivere le nostre storie preferite.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slideshow__slide" data-index="1">
+            <img src="images/trip-grand-canyon.jpg" alt="Grand Canyon" loading="lazy"
+                 onerror="this.closest('figure').classList.add('img-fallback--canyon')">
+            <figcaption>
+              <h3>Grand Canyon</h3>
+              <p>Un panorama immenso, per sentirci piccoli davanti alla grandezza della natura, insieme.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slideshow__slide" data-index="2">
+            <img src="images/trip-yosemite.jpg" alt="Yosemite National Park" loading="lazy"
+                 onerror="this.closest('figure').classList.add('img-fallback--yosemite')">
+            <figcaption>
+              <h3>Yosemite</h3>
+              <p>Foreste di sequoie e cascate infinite: la natura più selvaggia della California.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slideshow__slide" data-index="3">
+            <img src="images/trip-universal.jpg" alt="Universal Studios Hollywood" loading="lazy"
+                 onerror="this.closest('figure').classList.add('img-fallback--universal')">
+            <figcaption>
+              <h3>Universal Studios</h3>
+              <p>Un giorno da bambini, tra set cinematografici e attrazioni a tema.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slideshow__slide" data-index="4">
+            <img src="images/trip-maui.jpg" alt="Maui, Hawaii" loading="lazy"
+                 onerror="this.closest('figure').classList.add('img-fallback--maui')">
+            <figcaption>
+              <h3>Maui, Hawaii</h3>
+              <p>Il gran finale: acqua turchese, tramonti infiniti e i nostri primi giorni da marito e moglie.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <button class="slideshow__arrow slideshow__arrow--prev" type="button" aria-label="Tappa precedente">‹</button>
+        <button class="slideshow__arrow slideshow__arrow--next" type="button" aria-label="Tappa successiva">›</button>
+
+        <div class="slideshow__dots" role="tablist" aria-label="Vai a una tappa del viaggio">
+          <button class="slideshow__dot is-active" type="button" data-index="0" aria-label="Los Angeles"></button>
+          <button class="slideshow__dot" type="button" data-index="1" aria-label="Grand Canyon"></button>
+          <button class="slideshow__dot" type="button" data-index="2" aria-label="Yosemite"></button>
+          <button class="slideshow__dot" type="button" data-index="3" aria-label="Universal Studios"></button>
+          <button class="slideshow__dot" type="button" data-index="4" aria-label="Maui"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 7. UN REGALO PER IL NOSTRO VIAGGIO ============ -->
+  <section class="section section--gift" id="regalo">
+    <div class="section__inner section__inner--narrow">
+      <p class="eyebrow eyebrow--light">Il vostro pensiero</p>
+      <h2 class="section__title">Un regalo per il nostro viaggio</h2>
+      <p class="section__intro">
+        La vostra presenza al nostro fianco è già il regalo più grande. Se
+        desiderate comunque contribuire, il modo che ci farebbe più piacere
+        è aiutarci a costruire il nostro progetto di vita insieme, a partire
+        proprio dal viaggio di nozze che ci aspetta.
+      </p>
+
+      <div class="gift-card">
+        <dl class="gift-card__details">
+          <div class="gift-card__row">
+            <dt>Intestatario</dt>
+            <!-- MODIFICA QUI: nome intestatario del conto -->
+            <dd id="ibanHolder">Michele Crispoltoni &amp; Giorgia Paolocci</dd>
+          </div>
+          <div class="gift-card__row">
+            <dt>IBAN</dt>
+            <!-- MODIFICA QUI: il vostro IBAN reale -->
+            <dd>
+              <code id="ibanValue">IT00 A000 0000 0000 0000 0000 000</code>
+              <button class="copy-btn" id="copyIbanBtn" type="button" data-copy-target="ibanValue">
+                Copia IBAN
+              </button>
+            </dd>
+          </div>
+          <div class="gift-card__row">
+            <dt>Causale</dt>
+            <dd>Regalo di nozze Michele &amp; Giorgia</dd>
+          </div>
+        </dl>
+        <p class="gift-card__thanks">Grazie di cuore, da tutti e due. 🤍</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <p class="site-footer__monogram">M <span class="amp">&amp;</span> G</p>
+  <p>10 Luglio 2027 · Città di Castello</p>
+  <!-- MODIFICA QUI: aggiungi qui contatti, RSVP o link social se vuoi -->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
