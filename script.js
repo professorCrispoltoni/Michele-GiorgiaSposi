@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startAutoplay() {
       stopAutoplay();
-      autoplayTimer = setInterval(() => goTo(current + 1), 4500);
+      autoplayTimer = setInterval(() => goTo(current + 1), 3800);
     }
     function stopAutoplay() {
       if (autoplayTimer) clearInterval(autoplayTimer);
