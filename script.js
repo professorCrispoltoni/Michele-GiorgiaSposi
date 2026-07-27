@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
      3. CONTO ALLA ROVESCIA VERSO IL 10 LUGLIO 2027, ORE 16:00
      MODIFICA QUI: se cambia data/ora del rito, aggiorna weddingDate.
   -------------------------------------------------------------- */
-  const weddingDate = new Date("2027-07-10T16:00:00");
+  const weddingDate = new Date("2027-07-10T17:00:00");
 
   const cd = {
     days: document.getElementById("cd-days"),
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startAutoplay() {
       stopAutoplay();
-      autoplayTimer = setInterval(() => goTo(current + 1), 6000);
+      autoplayTimer = setInterval(() => goTo(current + 1), 4500);
     }
     function stopAutoplay() {
       if (autoplayTimer) clearInterval(autoplayTimer);

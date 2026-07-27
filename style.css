@@ -45,7 +45,7 @@ body {
   font-family: var(--f-body);
   color: var(--c-ink);
   background: var(--c-ivory);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -103,18 +103,29 @@ button { font-family: inherit; cursor: pointer; }
 .nav-toggle {
   display: inline-flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
-  background: none;
-  border: none;
+  width: 44px;
+  height: 44px;
+  background: rgba(54, 39, 67, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
   padding: 8px;
   z-index: 51;
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.45);
+  transition: background 0.25s ease;
 }
 .nav-toggle span {
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: var(--c-white);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-toggle[aria-expanded="true"] {
+  background: var(--c-plum);
+  border-color: var(--c-gold-light);
 }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -124,7 +135,7 @@ button { font-family: inherit; cursor: pointer; }
 .primary-nav a {
   color: var(--c-white);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   letter-spacing: 0.04em;
   position: relative;
   padding-bottom: 2px;
@@ -178,19 +189,28 @@ button { font-family: inherit; cursor: pointer; }
   overflow: hidden;
   color: var(--c-white);
   background-color: var(--c-plum);
+}
+.hero::before {
   /* MODIFICA QUI: la vera foto degli sposi.
      C'è già un'immagine segnaposto in /images/hero-sposi.jpg: ti basta
      sostituire quel file con la vostra foto (stesso nome) perché cambi
      da solo, senza bisogno di toccare questo CSS.
+     L'opacità è tenuta leggermente ridotta (invece che a piena intensità)
+     così il testo sopra resta sempre ben leggibile: per un contrasto
+     ancora più forte, abbassa il valore di opacity qui sotto.
   */
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url("images/hero-sposi.jpg");
   background-size: cover;
   background-position: center;
+  opacity: 0.6;
 }
 .hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(54,39,67,0.55) 0%, rgba(54,39,67,0.35) 40%, rgba(54,39,67,0.75) 100%);
+  background: linear-gradient(180deg, rgba(54,39,67,0.6) 0%, rgba(54,39,67,0.45) 40%, rgba(54,39,67,0.8) 100%);
 }
 .hero__petals { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 .petal {
@@ -297,11 +317,13 @@ button { font-family: inherit; cursor: pointer; }
 .section { padding: 5rem 1.25rem; }
 .section__inner { max-width: var(--max-width); margin: 0 auto; }
 .section__inner--narrow { max-width: 620px; text-align: center; }
-.section__title { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 1.4rem; color: var(--c-plum); }
-.section__intro { max-width: 640px; font-size: 1.08rem; color: var(--c-plum-soft); }
+.section__title { font-size: clamp(2.2rem, 5vw, 3.05rem); margin-bottom: 1.4rem; color: var(--c-plum); }
+.section__intro { max-width: 640px; font-size: 1.2rem; color: var(--c-plum-soft); }
 
 .section--story { background: var(--c-cream); }
 .section--reception { background: var(--c-cream); }
+.section--rsvp { background: var(--c-lilac-pale); text-align: center; }
+.section--rsvp .section__intro { margin: 0 auto; }
 
 /* Reveal all'ingresso in viewport (gestito in JS con IntersectionObserver) */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -317,7 +339,7 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center;
   margin-top: 2rem;
 }
-.story-text p { font-size: 1.08rem; }
+.story-text p { font-size: 1.2rem; }
 .story-text cite { font-style: italic; color: var(--c-lilac-deep); }
 
 .story-quote {
@@ -394,9 +416,9 @@ button { font-family: inherit; cursor: pointer; }
   background: linear-gradient(0deg, rgba(54,39,67,0.75), transparent);
 }
 
-.venue-text h3 { font-size: 1.7rem; color: var(--c-plum); margin-bottom: 0.2rem; }
-.venue-text p { color: var(--c-plum-soft); }
-.venue-time { font-style: italic; color: var(--c-lilac-deep); }
+.venue-text h3 { font-size: 1.85rem; color: var(--c-plum); margin-bottom: 0.2rem; }
+.venue-text p { color: var(--c-plum-soft); font-size: 1.15rem; }
+.venue-time { font-style: italic; color: var(--c-lilac-deep); font-size: 1.15rem; }
 
 .btn {
   display: inline-block;
@@ -415,6 +437,18 @@ button { font-family: inherit; cursor: pointer; }
 .btn--outline:hover, .btn--outline:focus-visible {
   background: var(--c-lilac-deep);
   color: var(--c-white);
+}
+
+.btn--solid {
+  background: var(--c-gold);
+  color: var(--c-plum);
+  font-size: 1.05rem;
+  padding: 0.85rem 2.2rem;
+  margin-top: 1.4rem;
+  box-shadow: 0 10px 25px -12px rgba(54,39,67,0.5);
+}
+.btn--solid:hover, .btn--solid:focus-visible {
+  background: var(--c-gold-light);
 }
 
 /* Immagini non ancora caricate: illustrazione di riserva a gradiente,
@@ -450,7 +484,7 @@ button { font-family: inherit; cursor: pointer; }
   gap: 0.5rem;
 }
 .proximity-note__icon { color: var(--c-gold-light); font-size: 1.2rem; }
-.proximity-note p { margin: 0; font-size: 1rem; }
+.proximity-note p { margin: 0; font-size: 1.1rem; }
 .proximity-note__link {
   color: var(--c-gold-light);
   text-decoration: none;
@@ -492,16 +526,22 @@ button { font-family: inherit; cursor: pointer; }
 .slideshow__slide figcaption {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  padding: 2.2rem 1.6rem 1.6rem;
-  background: linear-gradient(0deg, rgba(54,39,67,0.92) 10%, rgba(54,39,67,0.55) 55%, transparent 100%);
+  padding: 3rem 1.6rem 1.8rem;
+  background: linear-gradient(0deg, rgba(41,29,50,0.97) 25%, rgba(41,29,50,0.75) 65%, transparent 100%);
   color: var(--c-white);
 }
 .slideshow__slide figcaption h3 {
-  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-size: clamp(1.5rem, 4vw, 2.05rem);
   color: var(--c-gold-light);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
-.slideshow__slide figcaption p { margin: 0; font-size: 1rem; max-width: 46ch; }
+.slideshow__slide figcaption p {
+  margin: 0;
+  font-size: 1.1rem;
+  max-width: 46ch;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
 
 .slideshow__arrow {
   position: absolute;
@@ -612,7 +652,7 @@ button { font-family: inherit; cursor: pointer; }
    RESPONSIVE — smartphone first per i contenuti principali
 --------------------------------------------------------------- */
 @media (max-width: 780px) {
-  body { font-size: 17.5px; }
+  body { font-size: 18.5px; }
   .section { padding: 3.6rem 1.1rem; }
   .story-layout,
   .venue-layout,
