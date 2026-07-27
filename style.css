@@ -154,6 +154,14 @@ button { font-family: inherit; cursor: pointer; }
 
 /* Menu mobile a comparsa */
 @media (max-width: 860px) {
+  .site-header {
+    /* Il backdrop-filter sull'header creerebbe un "contenitore" per gli
+       elementi position:fixed al suo interno (come il menu qui sotto),
+       schiacciandolo nell'altezza della sola barra invece di coprire
+       tutto lo schermo. Lo togliamo solo qui, dove il menu è a schermo intero. */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .nav-toggle { display: inline-flex; }
   .primary-nav {
     position: fixed;
@@ -162,12 +170,25 @@ button { font-family: inherit; cursor: pointer; }
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: auto;
+    padding: 5rem 1.5rem 3rem;
     transform: translateX(100%);
     transition: transform 0.35s ease;
   }
   .primary-nav.is-open { transform: translateX(0); }
-  .primary-nav ul { flex-direction: column; gap: 2rem; text-align: center; }
-  .primary-nav a { font-size: 1.3rem; font-family: var(--f-display); }
+  .primary-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    text-align: center;
+    width: 100%;
+  }
+  .primary-nav a {
+    display: block;
+    font-size: 1.35rem;
+    font-family: var(--f-display);
+    padding: 0.5rem 0;
+  }
 }
 @media (min-width: 861px) {
   .nav-toggle { display: none; }
@@ -417,6 +438,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .venue-text h3 { font-size: 1.85rem; color: var(--c-plum); margin-bottom: 0.2rem; }
+
+.venue-cta {
+  margin-top: 2.2rem;
+  text-align: center;
+}
 .venue-text p { color: var(--c-plum-soft); font-size: 1.15rem; }
 .venue-time { font-style: italic; color: var(--c-lilac-deep); font-size: 1.15rem; }
 
