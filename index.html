@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261102d">
+<link rel="stylesheet" href="style.css?v=20261102h">
 </head>
 <body>
 
@@ -285,99 +285,49 @@
   <!-- ============ 6. VIAGGIO DI NOZZE ============ -->
   <section class="section section--trip" id="viaggio">
     <div class="section__inner">
-      <p class="eyebrow">Dopo il fatidico sì</p>
-      <h2 class="section__title">Il nostro viaggio di nozze</h2>
-      <p class="section__intro">
-        Dopo il fatidico sì, i novelli sposi lasceranno la Società per un viaggio degno di una
-        stagione memorabile: dalla baia di San Francisco ai canyon del Far West, fino alle lagune
-        turchesi di Bora Bora e Moorea. Tre settimane lontano da occhi indiscreti.
-      </p>
-
-      <div class="trip-stats reveal">
-        <div class="trip-stats__item"><span class="trip-stats__num">21</span><span class="trip-stats__label">giorni</span></div>
-        <div class="trip-stats__item"><span class="trip-stats__num">5</span><span class="trip-stats__label">tappe</span></div>
-        <div class="trip-stats__item"><span class="trip-stats__num">2</span><span class="trip-stats__label">mondi</span></div>
+      <h2 class="section__title">Il viaggio di nozze</h2>
+      <div class="route-dates">
+        <div><span>Partenza</span><b>26 luglio</b></div>
+        <div class="route-dates__plane" aria-hidden="true">✈</div>
+        <div><span>Ritorno</span><b>15 agosto</b></div>
       </div>
 
-      <div class="journey" id="journey" tabindex="0" aria-label="Le tappe del viaggio, scorri di lato">
-      <article class="stop" data-stop="1">
-        <span class="stop__node" aria-hidden="true">1</span>
-        <div class="stop__card">
-          <figure class="stop__media scene scene--sf">
-            <img src="images/trip-sf.jpg" alt="San Francisco" loading="lazy" onerror="this.remove()">
-            <span class="stop__nights">2 notti</span>
-          </figure>
-          <div class="stop__body">
-            <p class="stop__date">26 – 28 luglio</p>
-            <h3>San Francisco</h3>
-            <p>Il Golden Gate tra la nebbia, i tram che si arrampicano sulle colline, le dame colorate delle case vittoriane: il primo respiro d'America da marito e moglie.</p>
+      <div class="route">
+        <article class="leg">
+          <span class="leg__node" aria-hidden="true">1</span>
+          <div class="leg__card">
+            <figure class="leg__media"><img src="images/trip-sf.jpg" alt="San Francisco" loading="lazy"></figure>
+            <h3 class="leg__name">San Francisco</h3>
           </div>
-        </div>
-      </article>
-      <article class="stop" data-stop="2">
-        <span class="stop__node" aria-hidden="true">2</span>
-        <div class="stop__card">
-          <figure class="stop__media scene scene--vegas">
-            <img src="images/trip-vegas.jpg" alt="Las Vegas" loading="lazy" onerror="this.remove()">
-            <span class="stop__nights">1 notte</span>
-          </figure>
-          <div class="stop__body">
-            <p class="stop__date">28 – 29 luglio</p>
-            <h3>Las Vegas</h3>
-            <p>Una notte di luci sulla Strip e di fontane danzanti. Nessuna cappella nuziale, però: le promesse, si sa, sono già state pronunciate.</p>
+        </article>
+        <article class="leg">
+          <span class="leg__node" aria-hidden="true">2</span>
+          <div class="leg__card">
+            <figure class="leg__media"><img src="images/trip-vegas.jpg" alt="Las Vegas" loading="lazy"></figure>
+            <h3 class="leg__name">Las Vegas</h3>
           </div>
-        </div>
-      </article>
-      <article class="stop" data-stop="3">
-        <span class="stop__node" aria-hidden="true">3</span>
-        <div class="stop__card">
-          <ul class="thumbs" aria-label="Le tappe on the road">
-            <li><img src="images/trip-gc-tramonto.jpg" alt="Grand Canyon al tramonto" loading="lazy"><span>Grand Canyon</span></li>
-            <li><img src="images/trip-antelope.jpg" alt="Antelope Canyon" loading="lazy"><span>Antelope Canyon</span></li>
-            <li><img src="images/trip-grand-canyon.jpg" alt="Horseshoe Bend" loading="lazy"><span>Horseshoe Bend</span></li>
-            <li><img src="images/trip-monument.jpg" alt="Monument Valley" loading="lazy"><span>Monument Valley</span></li>
-          </ul>
-          <div class="stop__body">
-            <p class="stop__date">29 luglio – 3 agosto · 5 notti</p>
-            <h3>On the road nel Far West</h3>
-            <p>Giorni di strada tra canyon, deserti e luce rossa: l'alba sul Grand Canyon, le pareti d'arancio dell'Antelope Canyon, la curva di Horseshoe Bend e il West dei film a Monument Valley. La cronista, per quanto curiosa, rinuncia a seguirli.</p>
+        </article>
+        <article class="leg">
+          <span class="leg__node" aria-hidden="true">3</span>
+          <div class="leg__card">
+            <ul class="leg__thumbs"><li><img src="images/trip-gc-tramonto.jpg" alt="Grand Canyon" loading="lazy"><span>Grand Canyon</span></li><li><img src="images/trip-antelope.jpg" alt="Antelope Canyon" loading="lazy"><span>Antelope Canyon</span></li><li><img src="images/trip-grand-canyon.jpg" alt="Horseshoe Bend" loading="lazy"><span>Horseshoe Bend</span></li><li><img src="images/trip-monument.jpg" alt="Monument Valley" loading="lazy"><span>Monument Valley</span></li></ul>
+            <h3 class="leg__name">On the road nel Far West</h3>
           </div>
-        </div>
-      </article>
-      <article class="stop" data-stop="4">
-        <span class="stop__node" aria-hidden="true">4</span>
-        <div class="stop__card">
-          <figure class="stop__media scene scene--la">
-            <img src="images/trip-la.jpg" alt="Los Angeles" loading="lazy" onerror="this.remove()">
-          <img class="stop__polaroid" src="images/trip-universal.jpg" alt="Universal Studios Hollywood" loading="lazy" onerror="this.remove()">
-            <span class="stop__nights">3 notti</span>
-          </figure>
-          <div class="stop__body">
-            <p class="stop__date">3 – 6 agosto</p>
-            <h3>Los Angeles</h3>
-            <p>Il tramonto dal molo di Santa Monica, la città degli angeli e un giorno da bambini a Universal Studios: anche gli sposi più compìti hanno diritto a un po' di svago.</p>
+        </article>
+        <article class="leg">
+          <span class="leg__node" aria-hidden="true">4</span>
+          <div class="leg__card">
+            <figure class="leg__media"><img src="images/trip-la.jpg" alt="Los Angeles" loading="lazy"></figure>
+            <h3 class="leg__name">Los Angeles</h3>
           </div>
-        </div>
-      </article>
-      <article class="stop stop--lagoon" data-stop="5">
-        <span class="stop__node" aria-hidden="true">5</span>
-        <div class="stop__card">
-          <figure class="stop__media scene scene--bora">
-            <img src="images/trip-borabora.jpg" alt="Bora Bora e Moorea" loading="lazy" onerror="this.remove()">
-            <span class="stop__nights">6 notti</span>
-          </figure>
-          <div class="stop__body">
-            <p class="stop__date">7 – 13 agosto</p>
-            <h3>Bora Bora e Moorea</h3>
-            <p>Tre notti a Bora Bora, la perla del Pacifico, tra laguna turchese e mante giganti; poi altre tre a Moorea, l'isola a forma di cuore. Un epilogo degno di una grande stagione.</p>
+        </article>
+        <article class="leg leg--lagoon">
+          <span class="leg__node" aria-hidden="true">5</span>
+          <div class="leg__card">
+            <figure class="leg__media"><img src="images/trip-borabora.jpg" alt="Bora Bora e Moorea" loading="lazy"></figure>
+            <h3 class="leg__name">Bora Bora e Moorea</h3>
           </div>
-        </div>
-      </article>
-      </div>
-      <div class="journey-nav">
-        <button type="button" class="journey-btn" id="jPrev" aria-label="Tappa precedente">‹</button>
-        <div class="journey-dots" id="journeyDots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <button type="button" class="journey-btn" id="jNext" aria-label="Tappa successiva">›</button>
+        </article>
       </div>
     </div>
   </section>
@@ -456,6 +406,6 @@
 
 <a class="to-top" id="toTop" href="#indice" aria-label="Torna all'indice">↑</a>
 
-<script src="script.js?v=20261102d"></script>
+<script src="script.js?v=20261102h"></script>
 </body>
 </html>

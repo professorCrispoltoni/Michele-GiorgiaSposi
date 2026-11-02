@@ -288,3 +288,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+/* LIBRO DEL VIAGGIO: due pagine alla volta, si sfoglia con le frecce (o con il dito) */
+(function () {
+  var book = document.getElementById("book"); if (!book) return;
+  var sp = Array.prototype.slice.call(book.querySelectorAll(".spread")), cur = 0;
+  var cnt = document.getElementById("bookCount");
+  function show(n, dir) {
+    if (n < 0 || n >= sp.length) return;
+    sp.forEach(function (s, i) { s.classList.remove("is-on", "flip-next", "flip-prev"); if (i === n) { void s.offsetWidth; s.classList.add("is-on", dir > 0 ? "flip-next" : "flip-prev"); } });
+    cur = n; if (cnt) cnt.textContent = (n + 1) + " / " + sp.length;
+  }
+  show(0, 1); sp[0].classList.remove("flip-next");
+  document.getElementById("bookNext").addEventListener("click", function () { show(cur + 1, 1); });
+  document.getElementById("bookPrev").addEventListener("click", function () { show(cur - 1, -1); });
+  var x0 = null, y0 = null;
+  book.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  book.addEventListener("touchend", function (e) {
+    if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) show(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+  }, { passive: true });
+})();
