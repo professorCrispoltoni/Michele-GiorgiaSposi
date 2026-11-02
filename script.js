@@ -214,6 +214,16 @@ document.addEventListener("DOMContentLoaded", () => {
   onScroll();
 
   /* --------------------------------------------------------------
+     6c. PULSANTE "TORNA IN CIMA" (compare dopo un po' di scroll)
+  -------------------------------------------------------------- */
+  const toTop = document.getElementById("toTop");
+  if (toTop) {
+    const toggleTop = () => toTop.classList.toggle("is-visible", window.scrollY > 500);
+    window.addEventListener("scroll", toggleTop, { passive: true });
+    toggleTop();
+  }
+
+  /* --------------------------------------------------------------
      7. COPIA IBAN NEGLI APPUNTI
   -------------------------------------------------------------- */
   const copyIbanBtn = document.getElementById("copyIbanBtn");

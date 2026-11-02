@@ -1,8 +1,7 @@
 # Il sito del vostro matrimonio — guida rapida
 
 ## Struttura dei file
-- `index.html` → la copertina (foto, nomi, data, conto alla rovescia e il pulsante "Continua a leggere")
-- `sito.html` → la pagina con tutte le info (indice, storia, rito, ricevimento, viaggio, RSVP, regalo)
+- `index.html` → tutto il sito in una sola pagina (copertina, indice, storia, rito, ricevimento, viaggio, RSVP, regalo)
 - `style.css` → colori, font, layout, responsive
 - `script.js` → conto alla rovescia, menu mobile, copia IBAN, animazioni
 - `images/` → tutte le foto (da aggiungere tu)

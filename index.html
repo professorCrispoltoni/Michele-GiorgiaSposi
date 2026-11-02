@@ -31,12 +31,6 @@
 </head>
 <body>
 
-<header class="site-header" id="top">
-  <div class="site-header__inner">
-    <a class="monogram" href="index.html" aria-label="Michele e Giorgia">M<span class="monogram__amp">&amp;</span>G</a>
-  </div>
-</header>
-
 <main>
 
   <section class="hero" id="home">
@@ -46,17 +40,12 @@
 
     <div class="hero__content">
       <p class="eyebrow eyebrow--light">Gentile Lettore,</p>
-      <h1 class="hero__title">Michele <span class="amp">&amp;</span> Giorgia</h1>
       <p class="hero__script">si mormora di un lieto avvenimento</p>
+      <h1 class="hero__title">Michele <span class="amp">&amp;</span> Giorgia</h1>
+      <p class="hero__sposi">sposi</p>
 
       <div class="save-the-date">
-        <p class="save-the-date__label">Save the date</p>
         <time class="save-the-date__date" datetime="2027-07-10">Sabato 10 Luglio 2027</time>
-        <div class="save-the-date__events">
-          <p><span class="ev__what">Cerimonia · ore 17:00</span><span class="ev__where">Santuario della Madonna di Belvedere</span></p>
-          <p><span class="ev__what">Ricevimento · ore 19:00</span><span class="ev__where">Villa Pasqui</span></p>
-          <p class="ev__city">Città di Castello (PG)</p>
-        </div>
       </div>
 
       <div class="countdown" id="countdown" aria-live="polite">
@@ -65,12 +54,407 @@
         <div class="countdown__item"><span class="countdown__num" id="cd-mins">–</span><span class="countdown__label">minuti</span></div>
         <div class="countdown__item"><span class="countdown__num" id="cd-secs">–</span><span class="countdown__label">secondi</span></div>
       </div>
+    </div>
+    <span class="hero__down" aria-hidden="true">⌄</span>
+  </section>
 
-      <a class="hero-btn" href="sito.html">Continua a leggere <span class="hero-btn__arrow" aria-hidden="true">→</span></a>
+  <section class="section section--index" id="indice">
+    <div class="section__inner">
+      <div class="crest">
+        <img class="cameo" src="images/cameo-michele.png" alt="Profilo di Michele" width="66" height="103">
+        <div class="seal" role="img" aria-label="Monogramma M e G">
+          <span class="seal__shine" aria-hidden="true"></span>
+          <span class="seal__m">M</span><span class="seal__amp">&amp;</span><span class="seal__g">G</span>
+        </div>
+        <img class="cameo" src="images/cameo-giorgia.png" alt="Profilo di Giorgia" width="66" height="103">
+      </div>
+      <h2 class="section__title">La favola in sette atti</h2>
+
+      <nav class="index-list" aria-label="Indice del sito">
+        <a class="index-item" href="#conosciuti">
+          <span class="index-item__num">1</span>
+          <span class="index-item__text"><span class="index-item__title">Come ci siamo conosciuti</span><span class="index-item__sub">Dove tutto ebbe inizio</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+        <a class="index-item" href="#storia">
+          <span class="index-item__num">2</span>
+          <span class="index-item__text"><span class="index-item__title">La proposta</span><span class="index-item__sub">Una domanda sussurrata</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+        <a class="index-item" href="#chiesa">
+          <span class="index-item__num">3</span>
+          <span class="index-item__text"><span class="index-item__title">Il rito</span><span class="index-item__sub">Santuario della Madonna di Belvedere</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+        <a class="index-item" href="#location">
+          <span class="index-item__num">4</span>
+          <span class="index-item__text"><span class="index-item__title">Il ricevimento</span><span class="index-item__sub">Villa Pasqui</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+        <a class="index-item" href="#viaggio">
+          <span class="index-item__num">5</span>
+          <span class="index-item__text"><span class="index-item__title">Il viaggio di nozze</span><span class="index-item__sub">Da San Francisco a Bora Bora</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+        <a class="index-item" href="#rsvp">
+          <span class="index-item__num">6</span>
+          <span class="index-item__text"><span class="index-item__title">Confermate la presenza</span><span class="index-item__sub">Si attende la vostra risposta</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+        <a class="index-item" href="#regalo">
+          <span class="index-item__num">7</span>
+          <span class="index-item__text"><span class="index-item__title">Un dono per il viaggio</span><span class="index-item__sub">Un pensiero per gli sposi</span></span>
+          <span class="index-item__go" aria-hidden="true">›</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+
+  <div class="divider" aria-hidden="true"><!-- MODIFICA QUI: divisorio decorativo ripetuto tra le sezioni, definito in style.css --></div>
+
+  <!-- ============ 2. COME CI SIAMO CONOSCIUTI ============ -->
+  <section class="section section--meet" id="conosciuti">
+    <div class="section__inner">
+      <h2 class="section__title">Come ci siamo conosciuti</h2>
+
+      <div class="story-layout">
+        <article class="story-text reveal">
+          <p>
+            Tutto ebbe inizio su un campo da basket, dove il parquet vide nascere più di una
+            scintilla. Michele, secondo allenatore della squadra di serie A2, non poteva sapere
+            che quella giovane giunta da Roma in quinto liceo, rimasta a Umbertide per amore della
+            maglia, sarebbe un giorno diventata la sua compagna di vita.
+          </p>
+          <p>
+            I primi anni furono più tempesta che sonetto: il carattere fiero di lei, la severità
+            di lui, che altro non era se non il suo modo di credere in lei. Ma quando il crociato
+            la costrinse a lasciare il campo, Giorgia scelse la panchina e, al fianco di Michele
+            nei campionati giovanili femminili, mostrò passione e dedizione. Da quel giorno
+            l'uno divenne indispensabile all'altra.
+          </p>
+          <p>
+            Oggi li unisce il basket, certo, ma anche ogni passione dell'altro, abbracciata con
+            coraggio. Chi scrive, naturalmente, lo sapeva da tempo.
+          </p>
+        </article>
+
+        <figure class="story-media reveal">
+          <!-- MODIFICA QUI: sostituisci con una foto vostra del basket in images/basket.jpg -->
+          <div class="frame"><img class="meet-photo" src="images/basket.jpg" alt="Michele e Giorgia sul campo da basket" loading="lazy"
+               onerror="this.closest('figure').classList.add('img-fallback--basket')"></div>
+          <figcaption>Dove tutto è cominciato: il campo da basket</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 3. LA PROPOSTA ============ -->
+  <section class="section section--story" id="storia">
+    <div class="section__inner">
+      <h2 class="section__title">La proposta</h2>
+
+      <div class="story-layout">
+        <article class="story-text">
+          <p>
+            Ogni favola attende la sua sera. La loro fu quella del 4 luglio, sotto il cielo di
+            Tor Vergata, tra migliaia di anime accorse per il concerto di Ultimo. Quando
+            risuonarono le note di <cite>Quando dorme la città</cite>, il mondo intorno parve
+            svanire, e giunse una domanda sussurrata solo per loro due.
+          </p>
+
+          <blockquote class="story-quote">
+            <p>«Ti va di amarmi adesso e oltre gli anni?»</p>
+          </blockquote>
+
+          <p>
+            Tra lacrime e musica ebbe inizio il più dolce dei conti alla rovescia: quello verso
+            il giorno in cui diventeranno marito e moglie. Questa cronista, per una volta, non ha
+            altro da aggiungere.
+          </p>
+        </article>
+
+        <figure class="story-media">
+          <!--
+            MODIFICA QUI: il video della proposta.
+            Opzione A (file tuo): metti il file in /videos/proposta.mp4 e lascia il tag <video>.
+            Opzione B (YouTube): cancella il tag <video> e incolla al suo posto un iframe
+            di YouTube, ad esempio:
+            <iframe src="https://www.youtube.com/embed/TUO_ID_VIDEO" title="La proposta"
+              allowfullscreen loading="lazy"></iframe>
+          -->
+          <video class="story-video" id="proposalVideo" controls playsinline preload="none" poster="images/proposta-poster.jpg">
+            <source src="videos/proposta.mp4" type="video/mp4">
+            Il tuo browser non supporta la riproduzione video. Puoi comunque
+            <a href="videos/proposta.mp4">scaricare il video della proposta qui</a>.
+          </video>
+          <figcaption>4 luglio · Concerto di Ultimo, Tor Vergata · <em>Quando dorme la città</em></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 4. IL RITO — CHIESA ============ -->
+  <section class="section section--venue" id="chiesa">
+    <div class="section__inner">
+      <h2 class="section__title">Il rito</h2>
+
+      <div class="venue-layout">
+        <figure class="venue-media">
+          <!-- MODIFICA QUI: sostituisci con una foto del santuario in images/santuario.jpg -->
+          <img src="images/santuario.jpg" alt="Santuario della Madonna di Belvedere, Città di Castello" loading="lazy"
+               onerror="this.closest('figure').classList.add('img-fallback--church')">
+          <figcaption>Santuario della Madonna di Belvedere</figcaption>
+        </figure>
+
+        <article class="venue-text">
+          <h3>Santuario della Madonna di Belvedere</h3>
+          <p>Città di Castello (PG)</p>
+          <p>
+            Tra le mura raccolte e luminose di questo santuario, fra candele accese e profumo di
+            fiori, mentre la luce del pomeriggio d'estate filtra dalle vetrate, i promessi sposi
+            si scambieranno le loro promesse. Si raccomanda la puntualità: la Società non
+            perdona i ritardi.
+          </p>
+          <p class="venue-time"><time datetime="2027-07-10T17:00">Sabato 10 luglio 2027<br>Cerimonia alle ore 17:00</time></p>
+        </article>
+      </div>
+
+      <div class="venue-cta">
+        <a class="btn btn--outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Santuario+della+Madonna+di+Belvedere+Citt%C3%A0+di+Castello">
+          Apri in Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOTA DI VICINANZA TRA CHIESA E VILLA ============ -->
+  <div class="proximity-note">
+    <div class="proximity-note__inner">
+      <span class="proximity-note__icon" aria-hidden="true">✦</span>
+      <p>
+        Dal Santuario a Villa Pasqui si consiglia di spostarsi <strong>in
+        auto</strong>: bastano pochi minuti di strada per raggiungere il ricevimento senza fretta.
+      </p>
+      <a class="proximity-note__link" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/dir/?api=1&origin=Santuario+della+Madonna+di+Belvedere+Citt%C3%A0+di+Castello&destination=Villa+Pasqui+Citt%C3%A0+di+Castello&travelmode=driving">
+        Vedi il percorso in auto →
+      </a>
+    </div>
+  </div>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 5. IL RICEVIMENTO — VILLA PASQUI ============ -->
+  <section class="section section--venue section--reception" id="location">
+    <div class="section__inner">
+      <h2 class="section__title">Il ricevimento</h2>
+
+      <div class="venue-layout venue-layout--reverse">
+        <figure class="venue-media">
+          <!-- MODIFICA QUI: sostituisci con una foto di Villa Pasqui in images/villa-pasqui.jpg -->
+          <img src="images/villa-pasqui.jpg" alt="Villa Pasqui, Città di Castello" loading="lazy"
+               onerror="this.closest('figure').classList.add('img-fallback--villa')">
+          <figcaption>Villa Pasqui</figcaption>
+        </figure>
+
+        <article class="venue-text">
+          <h3>Villa Pasqui</h3>
+          <p>Città di Castello (PG)</p>
+          <p>
+            Fra rose bianche, candelabri e tavoli imbanditi sotto il cielo umbro, i festeggiamenti
+            proseguiranno a Villa Pasqui: musica, brindisi e danze fino a notte fonda. Si mormora
+            che sarà il ricevimento più atteso della stagione.
+          </p>
+          <p class="venue-time"><time datetime="2027-07-10T19:00">Sabato 10 luglio 2027<br>Aperitivo dalle ore 19:00</time></p>
+        </article>
+      </div>
+
+      <div class="venue-cta">
+        <a class="btn btn--outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Villa+Pasqui+Citt%C3%A0+di+Castello">
+          Apri in Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 6. VIAGGIO DI NOZZE ============ -->
+  <section class="section section--trip" id="viaggio">
+    <div class="section__inner">
+      <p class="eyebrow">Dopo il fatidico sì</p>
+      <h2 class="section__title">Il nostro viaggio di nozze</h2>
+      <p class="section__intro">
+        Dopo il fatidico sì, i novelli sposi lasceranno la Società per un viaggio degno di una
+        stagione memorabile: dalla baia di San Francisco ai canyon del Far West, fino alle lagune
+        turchesi di Bora Bora e Moorea. Tre settimane lontano da occhi indiscreti.
+      </p>
+
+      <div class="trip-stats reveal">
+        <div class="trip-stats__item"><span class="trip-stats__num">21</span><span class="trip-stats__label">giorni</span></div>
+        <div class="trip-stats__item"><span class="trip-stats__num">5</span><span class="trip-stats__label">tappe</span></div>
+        <div class="trip-stats__item"><span class="trip-stats__num">2</span><span class="trip-stats__label">mondi</span></div>
+      </div>
+
+      <div class="journey" id="journey">
+        <div class="journey__line" aria-hidden="true"><span class="journey__fill" id="journeyFill"></span></div>
+      <article class="stop" data-stop="1">
+        <span class="stop__node" aria-hidden="true">1</span>
+        <div class="stop__card">
+          <figure class="stop__media scene scene--sf">
+            <img src="images/trip-sf.jpg" alt="San Francisco" loading="lazy" onerror="this.remove()">
+            <span class="stop__nights">2 notti</span>
+          </figure>
+          <div class="stop__body">
+            <p class="stop__date">26 – 28 luglio</p>
+            <h3>San Francisco</h3>
+            <p>Il Golden Gate tra la nebbia, i tram che si arrampicano sulle colline, le dame colorate delle case vittoriane: il primo respiro d'America da marito e moglie.</p>
+          </div>
+        </div>
+      </article>
+      <article class="stop" data-stop="2">
+        <span class="stop__node" aria-hidden="true">2</span>
+        <div class="stop__card">
+          <figure class="stop__media scene scene--vegas">
+            <img src="images/trip-vegas.jpg" alt="Las Vegas" loading="lazy" onerror="this.remove()">
+            <span class="stop__nights">1 notte</span>
+          </figure>
+          <div class="stop__body">
+            <p class="stop__date">28 – 29 luglio</p>
+            <h3>Las Vegas</h3>
+            <p>Una notte di luci sulla Strip e di fontane danzanti. Nessuna cappella nuziale, però: le promesse, si sa, sono già state pronunciate.</p>
+          </div>
+        </div>
+      </article>
+      <article class="stop" data-stop="3">
+        <span class="stop__node" aria-hidden="true">3</span>
+        <div class="stop__card">
+          <ul class="thumbs" aria-label="Le tappe on the road">
+            <li><img src="images/trip-gc-tramonto.jpg" alt="Grand Canyon al tramonto" loading="lazy"><span>Grand Canyon</span></li>
+            <li><img src="images/trip-antelope.jpg" alt="Antelope Canyon" loading="lazy"><span>Antelope Canyon</span></li>
+            <li><img src="images/trip-grand-canyon.jpg" alt="Horseshoe Bend" loading="lazy"><span>Horseshoe Bend</span></li>
+            <li><img src="images/trip-monument.jpg" alt="Monument Valley" loading="lazy"><span>Monument Valley</span></li>
+          </ul>
+          <div class="stop__body">
+            <p class="stop__date">29 luglio – 3 agosto · 5 notti</p>
+            <h3>On the road nel Far West</h3>
+            <p>Giorni di strada tra canyon, deserti e luce rossa: l'alba sul Grand Canyon, le pareti d'arancio dell'Antelope Canyon, la curva di Horseshoe Bend e il West dei film a Monument Valley. La cronista, per quanto curiosa, rinuncia a seguirli.</p>
+          </div>
+        </div>
+      </article>
+      <article class="stop" data-stop="4">
+        <span class="stop__node" aria-hidden="true">4</span>
+        <div class="stop__card">
+          <figure class="stop__media scene scene--la">
+            <img src="images/trip-la.jpg" alt="Los Angeles" loading="lazy" onerror="this.remove()">
+          <img class="stop__polaroid" src="images/trip-universal.jpg" alt="Universal Studios Hollywood" loading="lazy" onerror="this.remove()">
+            <span class="stop__nights">3 notti</span>
+          </figure>
+          <div class="stop__body">
+            <p class="stop__date">3 – 6 agosto</p>
+            <h3>Los Angeles</h3>
+            <p>Il tramonto dal molo di Santa Monica, la città degli angeli e un giorno da bambini a Universal Studios: anche gli sposi più compìti hanno diritto a un po' di svago.</p>
+          </div>
+        </div>
+      </article>
+      <article class="stop stop--lagoon" data-stop="5">
+        <span class="stop__node" aria-hidden="true">5</span>
+        <div class="stop__card">
+          <figure class="stop__media scene scene--bora">
+            <img src="images/trip-borabora.jpg" alt="Bora Bora e Moorea" loading="lazy" onerror="this.remove()">
+            <span class="stop__nights">6 notti</span>
+          </figure>
+          <div class="stop__body">
+            <p class="stop__date">7 – 13 agosto</p>
+            <h3>Bora Bora e Moorea</h3>
+            <p>Tre notti a Bora Bora, la perla del Pacifico, tra laguna turchese e mante giganti; poi altre tre a Moorea, l'isola a forma di cuore. Un epilogo degno di una grande stagione.</p>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 7. CONFERMA LA TUA PARTECIPAZIONE ============ -->
+  <section class="section section--rsvp" id="rsvp">
+    <div class="section__inner section__inner--narrow">
+      <p class="eyebrow">Un ultimo passo</p>
+      <h2 class="section__title">Confermate la vostra presenza</h2>
+      <p class="section__intro">
+        I promessi sposi hanno bisogno di sapere se vi contano tra gli ospiti:
+        vi chiedono di compilare il modulo entro qualche settimana dal matrimonio, indicando
+        anche eventuali intolleranze o allergie. Questa cronista non gradisce le sorprese a tavola.
+      </p>
+
+      <!--
+        MODIFICA QUI: sostituisci questo link con l'indirizzo reale del tuo
+        Google Form quando sarà pronto (il pulsante si apre in una nuova scheda).
+      -->
+      <a class="btn btn--solid" target="_blank" rel="noopener"
+         href="https://docs.google.com/forms/d/e/1FAIpQLScb4kLmeE1gYD9Wp_-s8iSN6bgLBDmDljRBCzjRi4G2F7Q2Sg/viewform?usp=publish-editor">
+        Vai al modulo di conferma
+      </a>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ============ 8. UN REGALO PER IL NOSTRO VIAGGIO ============ -->
+  <section class="section section--gift" id="regalo">
+    <div class="section__inner section__inner--narrow">
+      <p class="eyebrow eyebrow--light">Il vostro pensiero</p>
+      <h2 class="section__title">Un dono per il loro viaggio</h2>
+      <p class="section__intro">
+        La vostra presenza al loro fianco è già il dono più grande. Se
+        desiderate comunque contribuire, i promessi sposi gradirebbero un aiuto per costruire il
+        loro progetto di vita insieme, a partire proprio dal viaggio di nozze che li attende.
+      </p>
+
+      <div class="gift-card">
+        <dl class="gift-card__details">
+          <div class="gift-card__row">
+            <dt>Intestatario</dt>
+            <!-- MODIFICA QUI: nome intestatario del conto -->
+            <dd id="ibanHolder">Michele Crispoltoni &amp; Giorgia Paolocci</dd>
+          </div>
+          <div class="gift-card__row">
+            <dt>IBAN</dt>
+            <!-- MODIFICA QUI: il vostro IBAN reale -->
+            <dd>
+              <code id="ibanValue">IT00 A000 0000 0000 0000 0000 000</code>
+              <button class="copy-btn" id="copyIbanBtn" type="button" data-copy-target="ibanValue">
+                Copia IBAN
+              </button>
+            </dd>
+          </div>
+          <div class="gift-card__row">
+            <dt>Causale</dt>
+            <dd>Regalo di nozze Michele &amp; Giorgia</dd>
+          </div>
+        </dl>
+        <p class="gift-card__thanks">Grazie di cuore, da parte di entrambi. 🤍</p>
+      </div>
     </div>
   </section>
 
 </main>
+
+<footer class="site-footer">
+  <p class="site-footer__monogram">M <span class="amp">&amp;</span> G</p>
+  <p>10 Luglio 2027 · Città di Castello</p>
+  <!-- MODIFICA QUI: aggiungi qui contatti, RSVP o link social se vuoi -->
+</footer>
+
+<a class="to-top" id="toTop" href="#home" aria-label="Torna in cima alla pagina">↑</a>
 
 <script src="script.js"></script>
 </body>
