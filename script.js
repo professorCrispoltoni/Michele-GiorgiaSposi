@@ -100,18 +100,29 @@ document.addEventListener("DOMContentLoaded", () => {
      MODIFICA QUI: cambia petalCount per averne di più o di meno.
   -------------------------------------------------------------- */
   const petalsContainer = document.getElementById("heroPetals");
-  const petalCount = 16;
+  const petalCount = 26;
 
   if (petalsContainer) {
+    const kinds = ["", "petal--gold", "petal--blush"];
     for (let i = 0; i < petalCount; i++) {
       const petal = document.createElement("span");
-      petal.className = "petal";
+      petal.className = "petal " + kinds[i % kinds.length];
       petal.style.left = `${Math.random() * 100}%`;
-      petal.style.setProperty("--drift", `${(Math.random() - 0.5) * 120}px`);
+      petal.style.setProperty("--drift", `${(Math.random() - 0.5) * 160}px`);
       petal.style.animationDuration = `${8 + Math.random() * 9}s`;
       petal.style.animationDelay = `${Math.random() * 10}s`;
-      petal.style.width = petal.style.height = `${8 + Math.random() * 8}px`;
+      petal.style.width = petal.style.height = `${8 + Math.random() * 9}px`;
       petalsContainer.appendChild(petal);
+    }
+    // piccole scintille dorate che si accendono e si spengono
+    for (let i = 0; i < 28; i++) {
+      const sp = document.createElement("span");
+      sp.className = "sparkle";
+      sp.style.left = `${Math.random() * 100}%`;
+      sp.style.top = `${Math.random() * 100}%`;
+      sp.style.animationDelay = `${Math.random() * 3.2}s`;
+      sp.style.animationDuration = `${2.4 + Math.random() * 2.4}s`;
+      petalsContainer.appendChild(sp);
     }
   }
 
@@ -121,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
      quando entrano nella parte visibile dello schermo.
   -------------------------------------------------------------- */
   const revealTargets = document.querySelectorAll(
-    ".story-text, .story-media, .venue-text, .venue-media, .trip-card, .gift-card, .section__title, .section__intro"
+    ".story-text, .story-media, .venue-text, .venue-media, .gift-card, .section__title, .section__intro, .trip-stats, .chapter, .ticket, .stop, .index-item, .crest"
   );
   revealTargets.forEach((el) => el.classList.add("reveal"));
 
@@ -144,65 +155,63 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* --------------------------------------------------------------
-     6. GALLERIA DEL VIAGGIO DI NOZZE (slideshow unico)
-     Cambia slide con le frecce, i pallini, lo swipe su mobile, e
-     avanza da sola ogni 6 secondi (si ferma se ci passi sopra o
-     mentre tocchi lo schermo).
+     6. VIAGGIO DI NOZZE: linea di progresso dorata e tappa corrente
+     La linea si "riempie" mentre si scorre, e il pallino della tappa
+     al centro dello schermo si illumina.
   -------------------------------------------------------------- */
-  const slideshow = document.getElementById("tripSlideshow");
+  const journey = document.getElementById("journey");
+  const journeyFill = document.getElementById("journeyFill");
+  const stops = document.querySelectorAll(".stop");
 
-  if (slideshow) {
-    const slides = Array.from(slideshow.querySelectorAll(".slideshow__slide"));
-    const dots = Array.from(slideshow.querySelectorAll(".slideshow__dot"));
-    const prevBtn = slideshow.querySelector(".slideshow__arrow--prev");
-    const nextBtn = slideshow.querySelector(".slideshow__arrow--next");
-    let current = 0;
-    let autoplayTimer = null;
-
-    function goTo(index) {
-      const total = slides.length;
-      current = (index + total) % total;
-      slides.forEach((slide, i) => slide.classList.toggle("is-active", i === current));
-      dots.forEach((dot, i) => dot.classList.toggle("is-active", i === current));
-    }
-
-    function startAutoplay() {
-      stopAutoplay();
-      autoplayTimer = setInterval(() => goTo(current + 1), 3800);
-    }
-    function stopAutoplay() {
-      if (autoplayTimer) clearInterval(autoplayTimer);
-    }
-
-    if (prevBtn) prevBtn.addEventListener("click", () => { goTo(current - 1); startAutoplay(); });
-    if (nextBtn) nextBtn.addEventListener("click", () => { goTo(current + 1); startAutoplay(); });
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => { goTo(i); startAutoplay(); });
-    });
-
-    slideshow.addEventListener("mouseenter", stopAutoplay);
-    slideshow.addEventListener("mouseleave", startAutoplay);
-
-    // Swipe con il dito su smartphone e tablet
-    let touchStartX = null;
-    slideshow.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].clientX;
-      stopAutoplay();
-    }, { passive: true });
-
-    slideshow.addEventListener("touchend", (e) => {
-      if (touchStartX === null) return;
-      const deltaX = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(deltaX) > 40) {
-        goTo(deltaX < 0 ? current + 1 : current - 1);
-      }
-      touchStartX = null;
-      startAutoplay();
-    }, { passive: true });
-
-    goTo(0);
-    startAutoplay();
+  function updateJourney() {
+    if (!journey || !journeyFill) return;
+    const rect = journey.getBoundingClientRect();
+    const mid = window.innerHeight * 0.55;
+    const progress = Math.max(0, Math.min(rect.height, mid - rect.top));
+    journey.style.setProperty("--progress", progress + "px");
   }
+
+  if (stops.length && "IntersectionObserver" in window) {
+    const stopObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => entry.target.classList.toggle("is-current", entry.isIntersecting));
+      },
+      { rootMargin: "-40% 0px -40% 0px" }
+    );
+    stops.forEach((s) => stopObserver.observe(s));
+  }
+
+  /* --------------------------------------------------------------
+     6b. EFFETTO PARALLASSE LEGGERO SULLE FOTO INCORNICIATE
+  -------------------------------------------------------------- */
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const parallaxImgs = Array.from(document.querySelectorAll(".venue-media img, .frame img, .stop__media > img:not(.stop__polaroid)"));
+
+  function updateParallax() {
+    if (reduceMotion) return;
+    const vh = window.innerHeight;
+    parallaxImgs.forEach((img) => {
+      if (!img.isConnected) return;
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      const offset = ((r.top + r.height / 2) - vh / 2) / vh;
+      img.style.translate = "0 " + (offset * -22).toFixed(1) + "px";
+    });
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      updateJourney();
+      updateParallax();
+      ticking = false;
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
 
   /* --------------------------------------------------------------
      7. COPIA IBAN NEGLI APPUNTI

@@ -1,7 +1,8 @@
 # Il sito del vostro matrimonio — guida rapida
 
 ## Struttura dei file
-- `index.html` → contenuto e testi del sito
+- `index.html` → la copertina (foto, nomi, data, conto alla rovescia e il pulsante "Continua a leggere")
+- `sito.html` → la pagina con tutte le info (indice, storia, rito, ricevimento, viaggio, RSVP, regalo)
 - `style.css` → colori, font, layout, responsive
 - `script.js` → conto alla rovescia, menu mobile, copia IBAN, animazioni
 - `images/` → tutte le foto (da aggiungere tu)
@@ -25,25 +26,21 @@ HTML o CSS.
 | `basket.jpg` | sezione "Come ci siamo conosciuti" |
 | `santuario.jpg` | sezione "Il rito" |
 | `villa-pasqui.jpg` | sezione "Il ricevimento" |
-| `trip-la.jpg` | Los Angeles (galleria viaggio) |
-| `trip-grand-canyon.jpg` | Grand Canyon (galleria viaggio) |
-| `trip-yosemite.jpg` | Yosemite (galleria viaggio) |
-| `trip-universal.jpg` | Universal Studios (galleria viaggio) |
-| `trip-maui.jpg` | Maui (galleria viaggio) |
+| `trip-sf.jpg`, `trip-vegas.jpg`, `trip-bryce.jpg`, `trip-page.jpg`, `trip-monument.jpg`, `trip-kingman.jpg` | tappe del viaggio (opzionali: se mancano si vede un'illustrazione) |
+| `trip-grand-canyon.jpg`, `trip-la.jpg`, `trip-universal.jpg` | Grand Canyon, Los Angeles (+ polaroid Universal) |
+| `trip-borabora.jpg`, `trip-moorea.jpg` | Bora Bora e Moorea (opzionali) |
 | `proposta-poster.jpg` | anteprima del video della proposta, prima che parta (opzionale) |
 
 Attenzione: il file deve avere **esattamente lo stesso nome ed estensione**
 (es. `trip-maui.jpg`, non `trip-maui.JPG` o `trip-maui.png`). Se la tua
 foto ha un formato diverso, rinominala semplicemente con estensione `.jpg`.
 
-## La galleria del viaggio di nozze
-È un'unica presentazione a scorrimento (non più un elenco di riquadri):
-cambia slide da sola ogni 6 secondi, e si può cambiare anche a mano con
-le frecce, i pallini in basso, o con lo swipe del dito su smartphone.
-Per aggiungere o togliere una tappa, in `index.html` cerca il commento
-"galleria a slide unica": basta copiare o cancellare un intero blocco
-`<figure class="slideshow__slide">` e il pallino corrispondente subito
-sotto (ricordati di rinumerare i `data-index` in ordine, 0,1,2,3...).
+## Il viaggio di nozze
+È un percorso verticale (pensato per smartphone) con una linea dorata che si
+riempie mentre si scorre. Ogni tappa è un blocco `<article class="stop">` in
+`index.html` (cerca `id="journey"`): per cambiare testi o date basta modificare
+quel blocco. Se una foto della tappa non esiste, compare un'illustrazione
+colorata al suo posto. `trip-maui.jpg` e `trip-yosemite.jpg` non sono più usate.
 
 ## Il video della proposta
 In `/videos/proposta.mp4` c'è già un breve segnaposto: sostituiscilo con il
