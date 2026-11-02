@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261102b">
 </head>
 <body>
 
@@ -39,6 +39,14 @@
     <div class="hero__petals" aria-hidden="true" id="heroPetals"></div>
 
     <div class="hero__content">
+      <div class="crest">
+        <img class="cameo" src="images/cameo-michele.png" alt="Profilo di Michele" width="66" height="103">
+        <div class="seal" role="img" aria-label="Monogramma M e G">
+          <span class="seal__shine" aria-hidden="true"></span>
+          <span class="seal__m">M</span><span class="seal__amp">&amp;</span><span class="seal__g">G</span>
+        </div>
+        <img class="cameo" src="images/cameo-giorgia.png" alt="Profilo di Giorgia" width="66" height="103">
+      </div>
       <p class="eyebrow eyebrow--light">Gentile Lettore,</p>
       <p class="hero__script">si mormora di un lieto avvenimento</p>
       <h1 class="hero__title">Michele <span class="amp">&amp;</span> Giorgia</h1>
@@ -60,14 +68,6 @@
 
   <section class="section section--index" id="indice">
     <div class="section__inner">
-      <div class="crest">
-        <img class="cameo" src="images/cameo-michele.png" alt="Profilo di Michele" width="66" height="103">
-        <div class="seal" role="img" aria-label="Monogramma M e G">
-          <span class="seal__shine" aria-hidden="true"></span>
-          <span class="seal__m">M</span><span class="seal__amp">&amp;</span><span class="seal__g">G</span>
-        </div>
-        <img class="cameo" src="images/cameo-giorgia.png" alt="Profilo di Giorgia" width="66" height="103">
-      </div>
       <h2 class="section__title">La favola in sette atti</h2>
 
       <nav class="index-list" aria-label="Indice del sito">
@@ -121,21 +121,14 @@
       <div class="story-layout">
         <article class="story-text reveal">
           <p>
-            Tutto ebbe inizio su un campo da basket, dove il parquet vide nascere più di una
-            scintilla. Michele, secondo allenatore della squadra di serie A2, non poteva sapere
-            che quella giovane giunta da Roma in quinto liceo, rimasta a Umbertide per amore della
-            maglia, sarebbe un giorno diventata la sua compagna di vita.
+            Tutto ebbe inizio su un campo da basket. Michele, secondo allenatore della squadra di
+            serie A2, notò quella giovane giunta da Roma, rimasta a Umbertide per amore della
+            maglia. I primi anni furono più tempesta che sonetto; poi un crociato la tenne lontana
+            dal campo e Giorgia scelse la panchina, al suo fianco.
           </p>
           <p>
-            I primi anni furono più tempesta che sonetto: il carattere fiero di lei, la severità
-            di lui, che altro non era se non il suo modo di credere in lei. Ma quando il crociato
-            la costrinse a lasciare il campo, Giorgia scelse la panchina e, al fianco di Michele
-            nei campionati giovanili femminili, mostrò passione e dedizione. Da quel giorno
-            l'uno divenne indispensabile all'altra.
-          </p>
-          <p>
-            Oggi li unisce il basket, certo, ma anche ogni passione dell'altro, abbracciata con
-            coraggio. Chi scrive, naturalmente, lo sapeva da tempo.
+            Da quel giorno l'uno divenne indispensabile all'altra. Chi scrive, naturalmente, lo
+            sapeva da tempo.
           </p>
         </article>
 
@@ -220,14 +213,14 @@
             si scambieranno le loro promesse. Si raccomanda la puntualità: la Società non
             perdona i ritardi.
           </p>
-          <p class="venue-time"><time datetime="2027-07-10T17:00">Sabato 10 luglio 2027<br>Cerimonia alle ore 17:00</time></p>
+          <p class="venue-time"><time datetime="2027-07-10T17:00">Cerimonia alle ore 17:00</time></p>
         </article>
       </div>
 
       <div class="venue-cta">
-        <a class="btn btn--outline" target="_blank" rel="noopener"
+        <a class="btn btn--map" target="_blank" rel="noopener"
            href="https://www.google.com/maps/search/?api=1&query=Santuario+della+Madonna+di+Belvedere+Citt%C3%A0+di+Castello">
-          Apri in Google Maps
+          <span class="btn--map__pin" aria-hidden="true">📍</span><span>Apri in Google Maps</span><span class="btn--map__arrow" aria-hidden="true">›</span>
         </a>
       </div>
     </div>
@@ -241,7 +234,7 @@
         Dal Santuario a Villa Pasqui si consiglia di spostarsi <strong>in
         auto</strong>: bastano pochi minuti di strada per raggiungere il ricevimento senza fretta.
       </p>
-      <a class="proximity-note__link" target="_blank" rel="noopener"
+      <a class="proximity-note__link btn--map btn--map-sm" target="_blank" rel="noopener"
          href="https://www.google.com/maps/dir/?api=1&origin=Santuario+della+Madonna+di+Belvedere+Citt%C3%A0+di+Castello&destination=Villa+Pasqui+Citt%C3%A0+di+Castello&travelmode=driving">
         Vedi il percorso in auto →
       </a>
@@ -271,14 +264,14 @@
             proseguiranno a Villa Pasqui: musica, brindisi e danze fino a notte fonda. Si mormora
             che sarà il ricevimento più atteso della stagione.
           </p>
-          <p class="venue-time"><time datetime="2027-07-10T19:00">Sabato 10 luglio 2027<br>Aperitivo dalle ore 19:00</time></p>
+          <p class="venue-time"><time datetime="2027-07-10T19:00">Aperitivo dalle ore 19:00</time></p>
         </article>
       </div>
 
       <div class="venue-cta">
-        <a class="btn btn--outline" target="_blank" rel="noopener"
+        <a class="btn btn--map" target="_blank" rel="noopener"
            href="https://www.google.com/maps/search/?api=1&query=Villa+Pasqui+Citt%C3%A0+di+Castello">
-          Apri in Google Maps
+          <span class="btn--map__pin" aria-hidden="true">📍</span><span>Apri in Google Maps</span><span class="btn--map__arrow" aria-hidden="true">›</span>
         </a>
       </div>
     </div>
@@ -303,8 +296,8 @@
         <div class="trip-stats__item"><span class="trip-stats__num">2</span><span class="trip-stats__label">mondi</span></div>
       </div>
 
-      <div class="journey" id="journey">
-        <div class="journey__line" aria-hidden="true"><span class="journey__fill" id="journeyFill"></span></div>
+      <p class="swipe-hint" aria-hidden="true"><span>Scorri</span> <i>→</i></p>
+      <div class="journey" id="journey" tabindex="0" aria-label="Le tappe del viaggio, scorri di lato">
       <article class="stop" data-stop="1">
         <span class="stop__node" aria-hidden="true">1</span>
         <div class="stop__card">
@@ -379,6 +372,7 @@
         </div>
       </article>
       </div>
+      <div class="journey-dots" id="journeyDots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     </div>
   </section>
 
@@ -456,6 +450,6 @@
 
 <a class="to-top" id="toTop" href="#home" aria-label="Torna in cima alla pagina">↑</a>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261102b"></script>
 </body>
 </html>

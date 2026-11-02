@@ -8,6 +8,30 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* TORNA IN CIMA + puntini del carosello (blocchi indipendenti, in testa allo script) */
+  (function () {
+    var toTop = document.getElementById("toTop");
+    if (toTop) {
+      var tick = function () {
+        var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        toTop.classList.toggle("is-visible", y > 300);
+      };
+      window.addEventListener("scroll", tick, { passive: true });
+      document.addEventListener("scroll", tick, { passive: true });
+      toTop.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+      tick();
+    }
+    var j = document.getElementById("journey"), dots = document.querySelectorAll("#journeyDots i");
+    if (j && dots.length) {
+      var upd = function () {
+        var cards = j.querySelectorAll(".stop"), best = 0, d = 1e9;
+        cards.forEach(function (c, i) { var x = Math.abs(c.offsetLeft - j.scrollLeft - 16); if (x < d) { d = x; best = i; } });
+        dots.forEach(function (el, i) { el.classList.toggle("on", i === best); });
+      };
+      j.addEventListener("scroll", upd, { passive: true }); upd();
+    }
+  })();
+
   /* --------------------------------------------------------------
      1. MENU MOBILE
      Apre e chiude la navigazione su schermi stretti.
@@ -132,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
      quando entrano nella parte visibile dello schermo.
   -------------------------------------------------------------- */
   const revealTargets = document.querySelectorAll(
-    ".story-text, .story-media, .venue-text, .venue-media, .gift-card, .section__title, .section__intro, .trip-stats, .chapter, .ticket, .stop, .index-item, .crest"
+    ".story-text, .story-media, .venue-text, .venue-media, .gift-card, .section__title, .section__intro, .trip-stats, .chapter, .ticket, .index-item, .crest"
   );
   revealTargets.forEach((el) => el.classList.add("reveal"));
 
@@ -216,12 +240,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* --------------------------------------------------------------
      6c. PULSANTE "TORNA IN CIMA" (compare dopo un po' di scroll)
   -------------------------------------------------------------- */
-  const toTop = document.getElementById("toTop");
-  if (toTop) {
-    const toggleTop = () => toTop.classList.toggle("is-visible", window.scrollY > 500);
-    window.addEventListener("scroll", toggleTop, { passive: true });
-    toggleTop();
-  }
 
   /* --------------------------------------------------------------
      7. COPIA IBAN NEGLI APPUNTI
