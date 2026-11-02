@@ -14,12 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (toTop) {
       var tick = function () {
         var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        toTop.classList.toggle("is-visible", y > 300);
+        toTop.classList.toggle("is-visible", y > 600);
       };
       window.addEventListener("scroll", tick, { passive: true });
       document.addEventListener("scroll", tick, { passive: true });
-      toTop.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+      toTop.addEventListener("click", function (e) { e.preventDefault(); var ix = document.getElementById("indice"); if (ix) ix.scrollIntoView({ behavior: "smooth", block: "start" }); });
       tick();
+    }
+
+    var pj = document.getElementById("journey"), bp = document.getElementById("jPrev"), bn = document.getElementById("jNext");
+    if (pj && bp && bn) {
+      var step = function (dir) {
+        var c = pj.querySelector(".stop"); var w = c ? c.getBoundingClientRect().width + 16 : 300;
+        pj.scrollBy({ left: dir * w, behavior: "smooth" });
+      };
+      bp.addEventListener("click", function () { step(-1); });
+      bn.addEventListener("click", function () { step(1); });
     }
     var j = document.getElementById("journey"), dots = document.querySelectorAll("#journeyDots i");
     if (j && dots.length) {

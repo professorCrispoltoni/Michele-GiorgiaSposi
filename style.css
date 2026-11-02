@@ -1267,3 +1267,26 @@ html, body { overflow-x: clip; }
   .hero__script { font-size: clamp(1.8rem, 2.6vw, 2.8rem); }
   .save-the-date__date { font-size: clamp(1.6rem, 2.4vw, 2.6rem); }
 }
+
+/* viaggio: scorrimento solo con i tasti (il dito scorre la pagina) */
+.journey { overflow-x: hidden; touch-action: pan-y; }
+.journey-nav { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 0.6rem; }
+.journey-btn {
+  width: 3.4rem; height: 3.4rem; border-radius: 50%; border: 2px solid #FBF0CB; cursor: pointer; font-size: 2.2rem; line-height: 1; padding: 0 0 0.25rem; color: #4A3509;
+  background: radial-gradient(circle at 30% 24%, #FBF0CB 0%, #E3C985 35%, #C2993F 75%, #9A7424 100%);
+  box-shadow: 0 0 0 2px #B38A33, 0 8px 16px -6px rgba(90,60,10,0.55);
+}
+.journey-btn:active { transform: scale(0.94); }
+
+/* home mobile/portrait: foto sotto i testi, mai sovrapposta; conto alla rovescia più piccolo */
+@media not all and (min-width: 760px) and (min-aspect-ratio: 1/1) {
+  .hero { flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100svh; }
+  .hero__content { order: 1; width: 100%; padding-bottom: 1.2rem; }
+  .hero::before {
+    order: 2; position: relative; inset: auto; flex: none; width: 100%; height: auto; aspect-ratio: 3 / 2; margin-top: auto;
+    background-size: cover; background-position: center;
+  }
+  .countdown__num { font-size: 1.6rem; }
+  .countdown__label { font-size: 0.78rem; letter-spacing: 0.12em; }
+  .countdown { gap: 0.9rem; }
+}

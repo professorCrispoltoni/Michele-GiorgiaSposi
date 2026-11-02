@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261102b">
+<link rel="stylesheet" href="style.css?v=20261102d">
 </head>
 <body>
 
@@ -121,14 +121,17 @@
       <div class="story-layout">
         <article class="story-text reveal">
           <p>
-            Tutto ebbe inizio su un campo da basket. Michele, secondo allenatore della squadra di
-            serie A2, notò quella giovane giunta da Roma, rimasta a Umbertide per amore della
-            maglia. I primi anni furono più tempesta che sonetto; poi un crociato la tenne lontana
-            dal campo e Giorgia scelse la panchina, al suo fianco.
+            Si narra che tutto cominciò su un campo da basket. Giorgia, giunta da Roma in quinto
+            liceo e rimasta a Umbertide, vestiva la maglia della squadra di serie A2; Michele, suo
+            secondo allenatore, la voleva sempre migliore. I primi anni furono più scintille che
+            sonetti: lei con il suo caratterino, lui con una severità che altro non era se non il
+            desiderio di spronarla.
           </p>
           <p>
-            Da quel giorno l'uno divenne indispensabile all'altra. Chi scrive, naturalmente, lo
-            sapeva da tempo.
+            Poi giunse l'infortunio al crociato e, con esso, la svolta. Giorgia lo affiancò nei
+            campionati giovanili femminili, e da quel giorno l'uno divenne indispensabile
+            all'altra. Oggi li uniscono il basket e le passioni di entrambi, che ciascuno ha fatto
+            un po' sue. Questa cronista, va da sé, lo aveva già intuito.
           </p>
         </article>
 
@@ -296,7 +299,6 @@
         <div class="trip-stats__item"><span class="trip-stats__num">2</span><span class="trip-stats__label">mondi</span></div>
       </div>
 
-      <p class="swipe-hint" aria-hidden="true"><span>Scorri</span> <i>→</i></p>
       <div class="journey" id="journey" tabindex="0" aria-label="Le tappe del viaggio, scorri di lato">
       <article class="stop" data-stop="1">
         <span class="stop__node" aria-hidden="true">1</span>
@@ -372,7 +374,11 @@
         </div>
       </article>
       </div>
-      <div class="journey-dots" id="journeyDots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="journey-nav">
+        <button type="button" class="journey-btn" id="jPrev" aria-label="Tappa precedente">‹</button>
+        <div class="journey-dots" id="journeyDots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <button type="button" class="journey-btn" id="jNext" aria-label="Tappa successiva">›</button>
+      </div>
     </div>
   </section>
 
@@ -448,8 +454,8 @@
   <!-- MODIFICA QUI: aggiungi qui contatti, RSVP o link social se vuoi -->
 </footer>
 
-<a class="to-top" id="toTop" href="#home" aria-label="Torna in cima alla pagina">↑</a>
+<a class="to-top" id="toTop" href="#indice" aria-label="Torna all'indice">↑</a>
 
-<script src="script.js?v=20261102b"></script>
+<script src="script.js?v=20261102d"></script>
 </body>
 </html>
