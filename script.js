@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const petalsContainer = document.getElementById("heroPetals");
   const petalCount = 26;
 
-  if (petalsContainer) {
+  if (false && petalsContainer) { /* pallini disattivati */
     const kinds = ["", "petal--gold", "petal--blush"];
     for (let i = 0; i < petalCount; i++) {
       const petal = document.createElement("span");

@@ -1364,3 +1364,39 @@ html, body { overflow-x: clip; }
 .leg__thumbs span { position: absolute; inset: auto 0 0 0; padding: 1.2rem 0.3rem 0.4rem; text-align: center; color: #fff; font-size: 1.1rem; font-weight: 600; line-height: 1.1; background: linear-gradient(180deg, transparent, rgba(30,20,40,0.8)); }
 
 .route-dates { margin-top: 1.4rem; }
+
+/* ================= ROUND 8 — palette estiva: prima e ultima sezione chiare ================= */
+.hero { background: linear-gradient(180deg, #EAEFFB 0%, #F4EEF8 55%, #FBEFEA 100%); color: var(--c-plum); }
+.hero::before { opacity: 1; }
+.hero__scrim { background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%); }
+.hero__glow { background: radial-gradient(ellipse at 50% 12%, rgba(255,243,205,0.75), transparent 60%), radial-gradient(ellipse at 10% 90%, rgba(250,222,226,0.5), transparent 50%); }
+.hero__petals { display: none; }
+.hero .eyebrow, .hero .eyebrow--light { color: #8F6C22; text-shadow: none; }
+.hero__script { color: var(--c-plum-soft); text-shadow: none; }
+.hero__title { color: var(--c-plum); text-shadow: none; }
+.hero__title .amp { background: linear-gradient(100deg, #B38A33 20%, #E3C985 45%, #9A7424 60%, #B38A33 80%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; }
+.hero__sposi { color: #A8832F; text-shadow: none; }
+.save-the-date, .save-the-date__date { color: var(--c-plum); text-shadow: none; border-color: rgba(168,131,47,0.55); }
+.countdown, .countdown__num { color: var(--c-plum); text-shadow: none; }
+.countdown__label { color: var(--c-plum-soft); text-shadow: none; }
+.hero__down { color: #A8832F; }
+@media (min-width: 760px) and (min-aspect-ratio: 1/1) {
+  .hero__scrim { background: linear-gradient(90deg, rgba(251,246,239,0.85) 0%, rgba(251,246,239,0.35) 40%, rgba(255,255,255,0) 65%); }
+}
+
+.section--gift { background: linear-gradient(180deg, #F4EEF8 0%, #E9EDFA 100%); color: var(--c-plum); }
+.section--gift .section__title { color: var(--c-plum); }
+.section--gift .section__intro { color: var(--c-plum-soft); }
+.gift-card { background: rgba(255,255,255,0.75); border-color: #C2993F; }
+.gift-card__row { border-bottom-color: rgba(168,131,47,0.3); }
+.gift-card__row dt { color: #8F6C22; }
+.gift-card__row dd, .gift-card__row dd code { color: var(--c-plum); }
+.copy-btn { border-color: #B38A33; color: #7A5A18; background: rgba(255,255,255,0.6); }
+.copy-btn:hover, .copy-btn:focus-visible { background: #E3C985; color: var(--c-plum); }
+.gift-card__thanks { color: #8F6C22; }
+.site-footer { background: #EDEAF8; color: var(--c-plum-soft); border-top: 1px solid rgba(168,131,47,0.4); }
+.site-footer__monogram { color: var(--c-plum); }
+
+@media (min-width: 760px) and (min-aspect-ratio: 1/1) { .hero__scrim { background: linear-gradient(90deg, rgba(251,246,239,0.85) 0%, rgba(251,246,239,0.3) 32%, rgba(255,255,255,0) 48%); } }
+
+.section--gift .eyebrow { color: #8F6C22; }
