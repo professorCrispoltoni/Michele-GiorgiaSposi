@@ -1400,3 +1400,8 @@ html, body { overflow-x: clip; }
 @media (min-width: 760px) and (min-aspect-ratio: 1/1) { .hero__scrim { background: linear-gradient(90deg, rgba(251,246,239,0.85) 0%, rgba(251,246,239,0.3) 32%, rgba(255,255,255,0) 48%); } }
 
 .section--gift .eyebrow { color: #8F6C22; }
+
+/* striscia vicinanza: chiara */
+.proximity-note { background: linear-gradient(90deg, #F4EEF8, #EAEFFB); color: var(--c-plum); border-top: 1px solid rgba(168,131,47,0.35); border-bottom: 1px solid rgba(168,131,47,0.35); }
+.proximity-note__icon { color: #A8832F; }
+.proximity-note p { color: var(--c-plum-soft); }
